@@ -16,7 +16,7 @@ const meter = new MeterProvider({
 }).getMeter("demo-prometheus");
 
 // Now, start recording data
-const counter = meter.createCounter("62070039_api_count", {
+const counter = meter.createCounter("api_count_62070039", {
   description: "Count movies api",
 });
 
