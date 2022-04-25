@@ -1,6 +1,25 @@
 version: '3.7'
 
 services:
+  service_1:
+    build: 
+      context: .
+      dockerfile: Dockerfile.service1
+    ports:
+      - 3000:3000
+  service_2:
+    build: 
+      context: .
+      dockerfile: Dockerfile.service2
+    ports:
+      - 3001:3001
+  service_3:
+    build: 
+      context: .
+      dockerfile: Dockerfile.service3
+    ports:
+      - 3002:3002
+      - 9464:9464
   prometheus:
     image: prom/prometheus:latest
     volumes:
